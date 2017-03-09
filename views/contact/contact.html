@@ -18,7 +18,7 @@
             <div class="col-md-1">
                 <div class="row">
                     <div class="photo-container">
-                        <img src="../../resources/male.jpg" alt="photo" height="100%">
+                        <img src="../../resources/male.jpg" alt="photo" height="100%" id="photo">
                     </div>
                 </div>
             </div>
@@ -85,17 +85,17 @@
 
             </div>
 
-            <div class="col-md-7 ">
+            <div class="col-md-7">
                 <h3>Список контактных телефонов</h3>
 
-                <div class="group-btns">
+                <div class="table-btns">
                     <button id="btn-delete-phone" class="btn">Удалить</button>
                     <button id="btn-add-phone" class="btn">Добавить</button>
                     <button id="btn-edit-phone" class="btn">Редактировать</button>
 
                 </div>
                 <div>
-                    <table class="phone-table" width="100%">
+                    <table class="tbl" width="100%">
                         <tr>
                             <td width="6%"><input type="checkbox"></td>
                             <td width="30%">+375(44)7852202</td>
@@ -114,13 +114,13 @@
                 <h3>Список присоединений</h3>
 
                 <div>
-                    <div class="group-btns">
+                    <div class="table-btns">
                         <button id="btn-delete-attach" class="btn">Удалить</button>
                         <button id="btn-add-attach" class="btn">Добавить</button>
                         <button id="btn-edit-attach" class="btn">Редактировать</button>
 
                     </div>
-                    <table class="attach-table" width="100%">
+                    <table class="tbl" width="100%">
                         <tr>
                             <td width="6%"><input type="checkbox"></td>
                             <td width="30%">Имя файла присоединения</td>
@@ -141,7 +141,7 @@
 
         </div>
         <div class="row">
-            <div class="controls">
+            <div class="controls-group">
                 <button class="btn" type="submit">Сохранить</button>
                 <button class="btn">Отменить</button>
             </div>
@@ -153,22 +153,21 @@
     <div class="popup-content">
         <form action="">
             <p>Код страны:</p>
-            <input type="text" required>
+            <input type="tel" required class="form-control">
 
             <p>Код оператора:</p>
-            <input type="text" required>
+            <input type="tel" required class="form-control">
 
             <p>Телефонный номер:</p>
-            <input type="text" required>
+            <input type="tel" required class="form-control">
 
-            <p>Код оператора:</p>
             <input type="radio" name="type" value="home" required> Дом.
             <input type="radio" name="type" value="mobile"> Моб.
 
             <p>Комментарий:</p>
-            <input type="text">
+            <input type="text" class="form-control">
 
-            <div class="controls">
+            <div class="controls-group">
                 <button id="btn-save-phone" type="submit" class="btn">Сохранить</button>
                 <button id="btn-undo-phone" class="btn">Отменить</button>
             </div>
@@ -181,12 +180,12 @@
     <div class="popup-content">
         <form action="">
             <p>Имя файла:</p>
-            <input type="text" required>
+            <input type="text" required class="form-control">
 
             <p>Комментарий:</p>
-            <input type="text">
+            <input type="text" class="form-control">
 
-            <div class="controls">
+            <div class="controls-group">
                 <button id="btn-save-attach" class="btn" type="submit">Сохранить</button>
                 <button id="btn-undo-attach" class="btn">Отменить</button>
             </div>
@@ -199,12 +198,13 @@
     <div class="popup-content">
         <form action="">
             <p>Путь к картинке:</p>
-            <input type="file" accept="image/*,image/jpeg" required>
+            <input type="file" accept="image/*,image/jpeg" required class="form-control">
 
-            <button>Найти</button>
-
-            <button id="btn-save-photo" class="btn" type="submit">Сохранить</button>
-            <button id="btn-undo-photo" class="btn">Отменить</button>
+            <div class="controls-group">
+                <button class="btn">Найти</button>
+                <button id="btn-save-photo" class="btn" type="submit">Сохранить</button>
+                <button id="btn-undo-photo" class="btn">Отменить</button>
+            </div>
         </form>
     </div>
 </div>
