@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="../../lib/bootstrap.css">
+    <script src="contact.js" defer></script>
+</head>
+<body>
+<h2 style="margin-left: 25px">Создание/редактирование контакта</h2>
+
+<div class="container-fluid">
+    <form action="" class="form-horizontal">
+        <div class="row">
+
+            <!--Photo-->
+            <div class="col-md-1">
+                <div class="row">
+                    <div class="photo-container">
+                        <img src="../../resources/male.jpg" alt="photo" height="100%">
+                    </div>
+                </div>
+            </div>
+            <!--Form-->
+            <div class="col-md-4">
+
+
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <p>Имя:</p>
+                        <input type="text" class="form-control" required>
+
+                        <p>Фамилия:</p>
+                        <input type="text" class="form-control" required>
+
+                        <p>Отчество:</p>
+                        <input type="text" class="form-control" required>
+
+                        <p>Дата рождения:</p>
+                        <input type="date" class="form-control" required>
+
+                        <p>Пол:</p>
+                        <input type="radio" name="gender" value="male" required> м
+                        <input type="radio" name="gender" value="female"> ж
+
+                        <p>Гражданство:</p>
+                        <input type="text" class="form-control" required>
+
+                        <p>Семейное положение:</p>
+                        <input type="text" class="form-control" required>
+
+                        <p>Веб-сайт:</p>
+                        <input type="text" class="form-control">
+
+                        <p>Email:</p>
+                        <input type="email" class="form-control" required>
+
+                        <p>Текущее место работы:</p>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Адрес</h3>
+
+                        <p>Страна:</p>
+                        <input type="text" class="form-control">
+
+                        <p>Город:</p>
+                        <input type="text" class="form-control">
+
+                        <p>Улица:</p>
+                        <input type="text" class="form-control">
+
+                        <p>Дом:</p>
+                        <input type="text" class="form-control">
+
+                        <p>Квартира:</p>
+                        <input type="text" class="form-control">
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="col-md-7 ">
+                <h3>Список контактных телефонов</h3>
+
+                <div class="group-btns">
+                    <button id="btn-delete-phone" class="btn">Удалить</button>
+                    <button id="btn-add-phone" class="btn">Добавить</button>
+                    <button id="btn-edit-phone" class="btn">Редактировать</button>
+
+                </div>
+                <div>
+                    <table class="phone-table" width="100%">
+                        <tr>
+                            <td width="6%"><input type="checkbox"></td>
+                            <td width="30%">+375(44)7852202</td>
+                            <td width="14%">Мобильный</td>
+                            <td width="50%">Комментарий</td>
+                        </tr>
+                        <tr>
+                            <td width="6%"><input type="checkbox"></td>
+                            <td width="30%">+375(44)7852202</td>
+                            <td width="14%">Мобильный</td>
+                            <td width="50%">Комментарий</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <h3>Список присоединений</h3>
+
+                <div>
+                    <div class="group-btns">
+                        <button id="btn-delete-attach" class="btn">Удалить</button>
+                        <button id="btn-add-attach" class="btn">Добавить</button>
+                        <button id="btn-edit-attach" class="btn">Редактировать</button>
+
+                    </div>
+                    <table class="attach-table" width="100%">
+                        <tr>
+                            <td width="6%"><input type="checkbox"></td>
+                            <td width="30%">Имя файла присоединения</td>
+                            <td width="14%">Дата загрузки</td>
+                            <td width="50%">Комментарий</td>
+                        </tr>
+                        <tr>
+                            <td width="6%"><input type="checkbox"></td>
+                            <td width="30%">Имя файла присоединения</td>
+                            <td width="14%">Дата загрузки</td>
+                            <td width="50%">Комментарий</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="controls">
+                <button class="btn" type="submit">Сохранить</button>
+                <button class="btn">Отменить</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div id="phone-popup" class="popup">
+    <div class="popup-content">
+        <form action="">
+            <p>Код страны:</p>
+            <input type="text" required>
+
+            <p>Код оператора:</p>
+            <input type="text" required>
+
+            <p>Телефонный номер:</p>
+            <input type="text" required>
+
+            <p>Код оператора:</p>
+            <input type="radio" name="type" value="home" required> Дом.
+            <input type="radio" name="type" value="mobile"> Моб.
+
+            <p>Комментарий:</p>
+            <input type="text">
+
+            <div class="controls">
+                <button id="btn-save-phone" type="submit" class="btn">Сохранить</button>
+                <button id="btn-undo-phone" class="btn">Отменить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div id="attach-popup" class="popup">
+    <div class="popup-content">
+        <form action="">
+            <p>Имя файла:</p>
+            <input type="text" required>
+
+            <p>Комментарий:</p>
+            <input type="text">
+
+            <div class="controls">
+                <button id="btn-save-attach" class="btn" type="submit">Сохранить</button>
+                <button id="btn-undo-attach" class="btn">Отменить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div id="photo-popup" class="popup">
+    <div class="popup-content">
+        <form action="">
+            <p>Путь к картинке:</p>
+            <input type="file" accept="image/*,image/jpeg" required>
+
+            <button>Найти</button>
+
+            <button id="btn-save-photo" class="btn" type="submit">Сохранить</button>
+            <button id="btn-undo-photo" class="btn">Отменить</button>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
