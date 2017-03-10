@@ -18,24 +18,24 @@
     </div>
 </nav>
 <div class="container-fluid ">
-    <form action="">
+    <form action="/email" method="post">
         <div class="row">
             <div class="col-md-6 well offset20px">
                 <div class="row buffer-top">
                     <p>Кому:</p>
-                    <input type="text" class="form-control">
+                    <input type="text" name="addressee" class="form-control" required>
                 </div>
                 <div class="row">
                     <p>Тема:</p>
-                    <input type="text" class="form-control">
+                    <input type="text" name="theme" class="form-control">
                 </div>
                 <div class="row">
                     <p>Шаблон:</p>
-                    <select name="" id="" class="form-control"></select>
+                    <select name="template" class="form-control"></select>
                 </div>
                 <div class="row">
                     <p>Текст:</p>
-                    <input id="text-field" type="text" class="form-control">
+                    <input id="text-field" name="text" type="text" class="form-control" required>
                 </div>
                 <div class="row">
                     <div class="control-group buffer-top">
