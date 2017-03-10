@@ -65,9 +65,12 @@
     cursor: pointer;
 }
 
-
 .controls-group {
     margin: 20px;
     text-align: center;
+}
+
+.controls-group > button {
+    margin: 0 5px;
 }
 

@@ -4,47 +4,111 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../../lib/bootstrap.css">
+    <link rel="stylesheet" href="search.css">
+    <script src="search.js" defer></script>
 </head>
 <body>
-<form action="">
-    <p>Фамилия:</p>
-    <input type="text" class="form-control">
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand">Справочник контактов</a>
+        </div>
+        <div class="navbar-header">
+            <span  class="navbar-brand">> Поиск контакта</span>
+        </div>
+    </div>
+</nav>
 
-    <p>Имя:</p>
-    <input type="text" class="form-control">
+<div class="container-fluid">
 
-    <p>Отчество:</p>
-    <input type="text" class="form-control">
-    <input type="date" class="form-control"> < Дата рождения <input type="date" class="form-control">
-    
-    <p>Пол:</p>
-    <select>
-        <option>м</option>
-        <option>ж</option>
-    </select>
-    <p>Семейное положение:</p>
-    <select>
-        <option>холост (не замужем)</option>
-        <option>женат (замужем)</option>
-    </select>
-    <p>Гражданство:</p>
-    <input type="text">
-    <h3>Адрес</h3>
+    <form action="">
+        <div class="top-buffer row">
+            <div class="col-md-8">
+                <div class="row well">
+                    <div class="col-md-4">
+                        <p>Фамилия:</p>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <p>Имя:</p>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <p>Отчество:</p>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-buffer row">
+            <div class="col-md-8">
+                <div class="row well">
+                    <div class="col-md-4">
+                        <p>Дата рождения:</p>
+                        <span>с </span><input type="date" class="date form-control"> <span>по</span> <input id='toDate'
+                                                                                                            type="date"
+                                                                                                            class="date form-control">
+                    </div>
+                    <div class="col-md-1">
+                        <p>Пол:</p>
+                        <select class="gender form-control">
+                            <option>м</option>
+                            <option>ж</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <p>Семейное положение:</p>
+                        <select class="family form-control">
+                            <option>холост/не замужем</option>
+                            <option>женат/замужем</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <p>Гражданство:</p>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
 
-    <p>Страна:</p>
-    <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="top-buffer row">
+            <div class="col-md-8">
+                <div class="row well">
+                    <h3 style="margin-left:15px">Адрес проживания</h3>
 
-    <p>Город:</p>
-    <input type="text" class="form-control">
+                    <div class="col-md-3">
+                        <p>Страна:</p>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <p>Город:</p>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <p>Улица:</p>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-1">
 
-    <p>Улица:</p>
-    <input type="text" class="form-control">
+                        <p>Дом:</p>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-1">
 
-    <p>Дом:</p>
-    <input type="text" class="form-control">
+                        <p>Квартира:</p>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
 
-    <p>Квартира:</p>
-    <input type="text" class="form-control">
-</form>
+        </div>
+        <div class="top-buffer row">
+            <div class="col-md-8">
+                <button type="submit" class="btn btn-search btn-success">Поиск</button>
+            </div>
+        </div>
+
+    </form>
+</div>
 </body>
 </html>

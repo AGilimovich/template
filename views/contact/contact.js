@@ -8,8 +8,8 @@ var btnUndoPhone = document.getElementById("btn-undo-phone");
 
 var btnSavePhone = document.getElementById("btn-save-phone");
 
-btnAddPhone.onclick = function (ev) {
-    ev.preventDefault();
+btnAddPhone.onclick = function () {
+
 
     //phonePopup.style.display = "block";
     phonePopup.className += " show";
@@ -30,7 +30,8 @@ var btnUndoAttach = document.getElementById("btn-undo-attach");
 
 var btnSaveAttach = document.getElementById("btn-save-attach");
 
-btnAddAttach.onclick = function () {
+btnAddAttach.onclick = function (ev) {
+
     attachPopup.className += " show";
 }
 

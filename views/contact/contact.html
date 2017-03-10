@@ -8,7 +8,17 @@
     <script src="contact.js" defer></script>
 </head>
 <body>
-<h2 style="margin-left: 25px">Создание/редактирование контакта</h2>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand">Справочник контактов</a>
+        </div>
+        <div class="navbar-header">
+            <span href="" class="navbar-brand">> Создание/редактирование контакта</span>
+        </div>
+    </div>
+</nav>
+
 
 <div class="container-fluid">
     <form action="" class="form-horizontal">
@@ -24,11 +34,8 @@
             </div>
             <!--Form-->
             <div class="col-md-4">
-
-
                 <div class="row">
                     <div class="col-md-6">
-
                         <p>Имя:</p>
                         <input type="text" class="form-control" required>
 
@@ -77,64 +84,58 @@
 
                         <p>Квартира:</p>
                         <input type="text" class="form-control">
-
                     </div>
-
                 </div>
-
-
             </div>
 
             <div class="col-md-7">
                 <h3>Список контактных телефонов</h3>
 
                 <div class="table-btns">
-                    <button id="btn-delete-phone" class="btn">Удалить</button>
-                    <button id="btn-add-phone" class="btn">Добавить</button>
-                    <button id="btn-edit-phone" class="btn">Редактировать</button>
+                    <button type="button" id="btn-delete-phone" class="btn">Удалить</button>
+                    <button type="button" id="btn-add-phone" class="btn">Добавить</button>
+                    <button type="button" id="btn-edit-phone" class="btn">Редактировать</button>
 
                 </div>
-                <div>
-                    <table class="tbl" width="100%">
-                        <tr>
-                            <td width="6%"><input type="checkbox"></td>
-                            <td width="30%">+375(44)7852202</td>
-                            <td width="14%">Мобильный</td>
-                            <td width="50%">Комментарий</td>
-                        </tr>
-                        <tr>
-                            <td width="6%"><input type="checkbox"></td>
-                            <td width="30%">+375(44)7852202</td>
-                            <td width="14%">Мобильный</td>
-                            <td width="50%">Комментарий</td>
-                        </tr>
-                    </table>
-                </div>
+
+                <table class="tbl" width="100%">
+                    <tr>
+                        <td width="6%"><input type="checkbox"></td>
+                        <td width="30%">+375(44)7852202</td>
+                        <td width="14%">Мобильный</td>
+                        <td width="50%">Комментарий</td>
+                    </tr>
+                    <tr>
+                        <td width="6%"><input type="checkbox"></td>
+                        <td width="30%">+375(44)7852202</td>
+                        <td width="14%">Мобильный</td>
+                        <td width="50%">Комментарий</td>
+                    </tr>
+                </table>
+
 
                 <h3>Список присоединений</h3>
+                <div class="table-btns">
+                    <button type="button" id="btn-delete-attach" class="btn">Удалить</button>
+                    <button type="button" id="btn-add-attach" class="btn">Добавить</button>
+                    <button type="button" id="btn-edit-attach" class="btn">Редактировать</button>
 
-                <div>
-                    <div class="table-btns">
-                        <button id="btn-delete-attach" class="btn">Удалить</button>
-                        <button id="btn-add-attach" class="btn">Добавить</button>
-                        <button id="btn-edit-attach" class="btn">Редактировать</button>
-
-                    </div>
-                    <table class="tbl" width="100%">
-                        <tr>
-                            <td width="6%"><input type="checkbox"></td>
-                            <td width="30%">Имя файла присоединения</td>
-                            <td width="14%">Дата загрузки</td>
-                            <td width="50%">Комментарий</td>
-                        </tr>
-                        <tr>
-                            <td width="6%"><input type="checkbox"></td>
-                            <td width="30%">Имя файла присоединения</td>
-                            <td width="14%">Дата загрузки</td>
-                            <td width="50%">Комментарий</td>
-                        </tr>
-                    </table>
                 </div>
+                <table class="tbl" width="100%">
+                    <tr>
+                        <td width="6%"><input type="checkbox"></td>
+                        <td width="30%">Имя файла присоединения</td>
+                        <td width="14%">Дата загрузки</td>
+                        <td width="50%">Комментарий</td>
+                    </tr>
+                    <tr>
+                        <td width="6%"><input type="checkbox"></td>
+                        <td width="30%">Имя файла присоединения</td>
+                        <td width="14%">Дата загрузки</td>
+                        <td width="50%">Комментарий</td>
+                    </tr>
+                </table>
+
 
             </div>
 
@@ -143,7 +144,7 @@
         <div class="row">
             <div class="controls-group">
                 <button class="btn" type="submit">Сохранить</button>
-                <button class="btn">Отменить</button>
+                <button type="button" class="btn">Отменить</button>
             </div>
         </div>
     </form>
@@ -179,13 +180,16 @@
 <div id="attach-popup" class="popup">
     <div class="popup-content">
         <form action="">
+
+            <input type="file" required>
+
             <p>Имя файла:</p>
             <input type="text" required class="form-control">
 
             <p>Комментарий:</p>
             <input type="text" class="form-control">
 
-            <div class="controls-group">
+            <div class="row controls-group">
                 <button id="btn-save-attach" class="btn" type="submit">Сохранить</button>
                 <button id="btn-undo-attach" class="btn">Отменить</button>
             </div>
@@ -200,7 +204,7 @@
             <p>Путь к картинке:</p>
             <input type="file" accept="image/*,image/jpeg" required class="form-control">
 
-            <div class="controls-group">
+            <div class="row controls-group">
                 <button class="btn">Найти</button>
                 <button id="btn-save-photo" class="btn" type="submit">Сохранить</button>
                 <button id="btn-undo-photo" class="btn">Отменить</button>
